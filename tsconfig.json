@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es3",
+        "noImplicitAny": true,
+        "noImplicitReturns": false,
+        "sourceMap": true,
+        "outDir": "../target",
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "../node_modules/*"
+            ]
+        }
+    },
+    "include": [
+        "./**/*.ts"
+    ]
+}

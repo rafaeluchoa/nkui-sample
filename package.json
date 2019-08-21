@@ -1,0 +1,24 @@
+{
+  "name": "nkui-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "watchify src/App.ts -p [ tsify -p src/ ] -p [ parcelify -o public/bundle.css ] -o public/bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "3.5.3",
+    "browserify": "16.2.3",
+    "tsify": "4.0.1",
+    "watchify": "3.11.1",
+    "parcelify": "2.2.1"
+  },
+  "dependencies": {
+    "@naskar/nkui": "0.0.9"
+  },
+  "style": [
+    "node_modules/@naskar/nkui/dist/nkui.css"
+  ]
+}
