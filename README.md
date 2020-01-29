@@ -30,5 +30,5 @@ npm i
 npm start
 ```
 
-The start script run http-server with watchfy, thus, on change files, refresh your browser for update the javascript files.
+The start script run http-server with watchfy, thus, on change files, refresh your browser to update the javascript files.
 
