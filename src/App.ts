@@ -15,11 +15,14 @@ let view = ui.item().add(ui.vertical()
     .add(ui.button().primary().text('Login').click(() => {
         
         vm.open((close) => 
-            ui.vertical()
-                .add(ui.text("Hello " + username.value()))
-                .add(ui.button().text("Fechar").click(() => {
-                    close();
-                }))
+            ui.item().add(
+                ui.vertical()
+                    .add(ui.title("nkui-sample modal"))
+                    .add(ui.text("Welcome, Hello " + username.value()))
+                    .add(ui.button().text("Close").click(() => {
+                        close();
+                    }))
+            )
         );
 
     })));

@@ -680,7 +680,14 @@ var view = ui.item().add(ui.vertical()
     .add(password)
     .add(ui.box())
     .add(ui.button().primary().text('Login').click(function () {
-    username.msg("Hello " + username.value());
+    vm.open(function (close) {
+        return ui.item().add(ui.vertical()
+            .add(ui.title("nkui-sample modal"))
+            .add(ui.text("Welcome, Hello " + username.value()))
+            .add(ui.button().text("Close").click(function () {
+            close();
+        })));
+    });
 })));
 vm.open(function (close) { return view; });
 

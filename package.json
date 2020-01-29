@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "watchify src/App.ts -p [ tsify -p src/ ] -p [ parcelify -o public/bundle.css ] -o public/bundle.js"
+    "server": "http-server -s -o / ",
+    "watch": "watchify src/App.ts -p [ tsify -p src/ ] -p [ parcelify -o public/bundle.css ] -o public/bundle.js",
+    "start": "concurrently npm:server npm:watch"
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +15,9 @@
     "browserify": "16.2.3",
     "tsify": "4.0.1",
     "watchify": "3.11.1",
-    "parcelify": "2.2.1"
+    "parcelify": "2.2.1",
+    "http-server": "0.12.1",
+    "concurrently": "5.1.0"
   },
   "dependencies": {
     "@naskar/nkui": "0.0.9"
